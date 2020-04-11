@@ -14,8 +14,6 @@ class School {
         this.name = name;
     }
 
-
-
     String getName() {
         // Методы не могут вызывать конструктор!
         // Ошибка:
@@ -23,23 +21,26 @@ class School {
         return name;
     }
 
-    void setName(String name) {
-        this.name = name;
-    }
-
     int getSince() {
         return since;
-    }
-
-    void setSince(int since) {
-        this.since = since;
     }
 
     int getStudentCount() {
         return studentCount;
     }
 
-    void setStudentCount(int studentCount) {
+    School setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    School setSince(int since) {
+        this.since = since;
+        return this;
+    }
+
+    School setStudentCount(int studentCount) {
         this.studentCount = studentCount;
+        return this;
     }
 }
